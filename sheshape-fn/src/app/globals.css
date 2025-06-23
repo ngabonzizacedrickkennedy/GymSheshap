@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+ 
+    --primary: 164 78% 20%;
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 157 56% 41%;
+    --secondary-foreground: 210 40% 98%;
+ 
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+ 
+    --accent: 9 100% 81%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 164 78% 20%;
+ 
+    --radius: 0.75rem;
+  }
+ 
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+ 
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+ 
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+ 
+    --primary: 164 78% 20%;
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 157 56% 41%;
+    --secondary-foreground: 210 40% 98%;
+ 
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+ 
+    --accent: 9 100% 81%;
+    --accent-foreground: 210 40% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+ 
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 157 56% 41%;
+  }
+}
+ 
+@layer base {
+  html {
+    font-size: 16px; /* Base font size */
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans text-base leading-relaxed;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-serif tracking-tight text-primary-800;
+    line-height: 1.2;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-bold;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl font-semibold;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl font-semibold;
+  }
+
+  h5 {
+    @apply text-lg md:text-xl font-semibold;
+  }
+
+  p {
+    @apply text-base text-neutral-600;
+  }
+  
+  .brand-script {
+    @apply font-cursive;
+  }
+}
+
+/* Custom Classes */
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-600 px-4 py-2 rounded-md transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary-600 px-4 py-2 rounded-md transition-colors;
+  }
+  
+  .btn-accent {
+    @apply bg-accent1 text-neutral-800 hover:bg-accent1-500 px-4 py-2 rounded-md transition-colors;
+  }
+  
+  .btn-outline {
+    @apply border border-primary text-primary hover:bg-primary hover:text-white px-4 py-2 rounded-md transition-colors;
+  }
+  
+  .input-primary {
+    @apply border border-neutral-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section {
+    @apply py-12 md:py-20;
+  }
+  
+  .gradient-primary {
+    @apply bg-gradient-to-r from-primary to-secondary;
+  }
+  
+  .section-padding {
+    @apply py-12 md:py-20;
+  }
+}

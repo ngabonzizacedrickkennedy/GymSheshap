@@ -1,0 +1,11 @@
+# Database configuration
+spring.datasource.url=jdbc:postgresql://localhost:5432/sheShape_db
+spring.datasource.username=your_username_here
+spring.datasource.password=your_password_here
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+# JWT Configuration
+jwt.secret=YourStrongSecretKeyHereMakeSureItIsLongEnoughForSecurity
+jwt.expiration=86400000
+
+# Other configurations remain the same...
