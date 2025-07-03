@@ -128,6 +128,7 @@ public class DatabaseInitializer implements CommandLineRunner {
         nutritionistUser.setPassword(passwordEncoder.encode("nutritionist123"));
         nutritionistUser.setRole(User.Role.NUTRITIONIST);
         nutritionistUser.setIsActive(true);
+
         
         Set<Authority> authorities = new HashSet<>();
         authorities.add(createAuthorityIfNotFound("ROLE_NUTRITIONIST"));
